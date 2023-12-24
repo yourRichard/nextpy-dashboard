@@ -3,7 +3,7 @@
 import nextpy as xt
 from .style import css,blink,dimensions
 from .state import State
-from .components import Box
+from .components import Box,Button
 
 def index() -> xt.Component:
     return xt.vstack(
@@ -67,10 +67,24 @@ def index() -> xt.Component:
                     "time",
                 ),
                 transition = "all 550ms ease",
-                
             ),
-            
+            spacing = State.spacing
         ),
+         xt.vstack(
+                xt.text(
+                    "Change your layout here",
+                    _light = {"color":"rgba(255,255,255,0.81)"},
+                    font_size = "14px"
+                ),
+                xt.hstack(
+                    Button("1x",State.setFull),
+                    Button("2x",State.setHalf),
+                    Button("3x",State.setThree),
+                    spacing = "0"
+                ),
+                spacing = "0"
+            ),
+
         style = css["workSpace"],
         padding_bottom = "80px"
     )
@@ -78,5 +92,5 @@ def index() -> xt.Component:
 
 # Add state and page to the app.
 app = xt.App(style=css["app"])
-app.add_page(index,on_load = State.emptyFunction)
+app.add_page(index,on_load = State.greetOnLoad)
 app.compile()

@@ -27,7 +27,7 @@ class Box(xt.Container):
             ],
         )
 class Button(xt.Button):
-    def __init__(self,number,function):
+    def __init__(self,number,function = State.emptyFunction):
         super().__init__(
             color_scheme = xt.Var.create("none"),
             color = "rgba(255,255,255,0.81)",
