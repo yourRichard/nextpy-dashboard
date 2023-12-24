@@ -17,7 +17,6 @@ class Box(xt.Container):
             border =f"5px double {border_color}",
             cursor = "pointer",
             border_radius = "10px",
-            on_click = function,
             childern=[
                 xt.icon(
                   tag=icon,
@@ -25,6 +24,8 @@ class Box(xt.Container):
                   _light= {"color":"rgba(255,255,255,0.81)"}  
                 ),
             ],
+            on_click = function,
+            
         )
 class Button(xt.Button):
     def __init__(self,number,function = State.emptyFunction):

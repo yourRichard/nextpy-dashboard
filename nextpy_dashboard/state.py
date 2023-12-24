@@ -22,10 +22,10 @@ class State(xt.State):
         self.spacing = "5rem",
         self.leftSpacing = "4rem"
 
-    def setOneBlock(self):
-        self.spacing = "0.5rem"
-        self.oneBlockSpace = "3rem",
-        self.leftSpacing = "0.5rem"
+    def setFour(self):
+        self.spacing = "5rem"
+        self.oneBlockSpace = "5rem",
+        self.leftSpacing = "4rem"
 
 
     def emptyFunction(self):

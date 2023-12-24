@@ -31,7 +31,6 @@ def index() -> xt.Component:
                     xt.vstack(
                         Box(dimensions["square"],"red","1.5","email"),
                         Box(dimensions["square"],"teal","1.5","link"),
-                        spacing = State.oneBlockSpace,
                         ),
                         
                     Box(
@@ -40,7 +39,6 @@ def index() -> xt.Component:
                         "1.75",
                         "calendar",
                 ),
-                spacing = State.oneBlockSpace,
                     ),
                 Box(
                     dimensions["custom_1"],
@@ -57,19 +55,17 @@ def index() -> xt.Component:
                         Box(dimensions["square"],"teal","1.5","email"),
                         Box(dimensions["square"],"red","1.5","email"),
                         Box(dimensions["square"],"teal","1.5","email"),
-                        spacing = State.oneBlockSpace
                     ),
                     xt.vstack(
                         Box(dimensions["square"],"gray","1.5","email"),
                         Box(dimensions["rectangle"],"orange","1.75","email"),
-                        spacing = State.spacing
                         ),
                 ),
                 Box(
                     dimensions["custom_2"],
                     "purple",
                     "1.75",
-                    "time",
+                    "email",
                 ),
                 spacing = State.oneBlockSpace,
                 transition = "all 550ms ease",
@@ -86,7 +82,7 @@ def index() -> xt.Component:
                     Button("1x",State.setFull),
                     Button("2x",State.setHalf),
                     Button("3x",State.setThree),
-                    Button("3x",State.setOneBlock),
+                    Button("4x",State.setFour),
                     spacing = "0"
                 ),
                 spacing = "0"
