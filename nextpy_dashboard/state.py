@@ -4,19 +4,28 @@ import asyncio
 class State(xt.State):
     prompt:str = ""
     leftSpacing: str = "0.5rem",
-    spacing: str = "0.5rem"
+    spacing: str = "0.5rem",
+    oneBlockSpace = "0.5rem"
 
     def setFull(self):
+        self.oneBlockSpace = "0.5rem",
         self.spacing = "0.5rem",
         self.leftSpacing = "0.5rem"
 
     def setHalf(self):
+        self.oneBlockSpace = "0.5rem",
         self.spacing = "5rem",
         self.leftSpacing = "0.5rem"
 
     def setThree(self):
+        self.oneBlockSpace = "0.5rem",
         self.spacing = "5rem",
         self.leftSpacing = "4rem"
+
+    def setOneBlock(self):
+        self.spacing = "0.5rem"
+        self.oneBlockSpace = "3rem",
+        self.leftSpacing = "0.5rem"
 
 
     def emptyFunction(self):
