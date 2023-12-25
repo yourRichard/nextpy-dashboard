@@ -17,13 +17,13 @@ class Box(xt.Container):
             border =f"5px double {border_color}",
             cursor = "pointer",
             border_radius = "10px",
-            childern=[
+            children=[
                 xt.icon(
                   tag=icon,
                   transform=f"Scale({size})",
-                  _light= {"color":"rgba(255,255,255,0.81)"}  
-                ),
-            ],
+                  _light= {"color":"rgba(255,255,255)"},
+                )
+            ],   
             on_click = function,
             
         )

@@ -29,8 +29,8 @@ def index() -> xt.Component:
             xt.vstack(
                 xt.hstack(
                     xt.vstack(
-                        Box(dimensions["square"],"red","1.5","email"),
-                        Box(dimensions["square"],"teal","1.5","link"),
+                        Box(dimensions["square"],"red","1.5","drag_handle",State.getMovies),
+                        Box(dimensions["square"],"teal","1.5","at_sign",State.getQuates),
                         ),
                         
                     Box(
@@ -38,6 +38,7 @@ def index() -> xt.Component:
                         "orange",
                         "1.75",
                         "calendar",
+                        State.getDate
                 ),
                     ),
                 Box(
@@ -45,6 +46,7 @@ def index() -> xt.Component:
                     "gray",
                     "4",
                     "time",
+                    State.getTime
                 ),
                 transition = "all 550ms ease",
                 spacing = State.leftSpacing,
@@ -58,7 +60,7 @@ def index() -> xt.Component:
                     ),
                     xt.vstack(
                         Box(dimensions["square"],"gray","1.5","email"),
-                        Box(dimensions["rectangle"],"orange","1.75","email"),
+                        Box(dimensions["rectangle"],"orange","1.75","lock",State.passwordGenerate),
                         ),
                 ),
                 Box(
@@ -85,7 +87,8 @@ def index() -> xt.Component:
                     Button("4x",State.setFour),
                     spacing = "0"
                 ),
-                spacing = "0"
+                spacing = "0",
+                padding_top ="30px"
             ),
 
         style = css["workSpace"],
